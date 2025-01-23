@@ -5,6 +5,7 @@ const next = document.querySelector('.next');
 const sliderCount = (Array.from(document.querySelectorAll(".carousel .slider section"))).length;
 let direction = -1;
 
+// Adjust slider width based on amount of slides
 slider.style.width = `${sliderCount * 100}vw`;
 
 prev.addEventListener('click', function() {
@@ -38,6 +39,6 @@ slider.addEventListener('transitionend', function() {
     slider.style.transform = 'translateX(0)';
 
     setTimeout(function() {
-        slider.style.transition = 'all 0.5s ease-in-out';
+        slider.style.transition = 'transform 0.5s ease-in-out';
     });
 });
