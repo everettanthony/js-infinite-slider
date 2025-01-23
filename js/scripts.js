@@ -28,6 +28,7 @@ next.addEventListener('click', function() {
     slider.style.transform = 'translateX(-100vw)';
 });
 
+// Adjust slide positioning when transition ends
 slider.addEventListener('transitionend', function() {
     if (direction === -1) {
         slider.appendChild(slider.firstElementChild);
